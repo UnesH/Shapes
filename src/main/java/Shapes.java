@@ -8,32 +8,28 @@ public class Shapes {
         this.out = out;
     }
 
-    public void area(String string, String string2) {
+    public void area(final String string, final String string2) {
         createShape(string, string2);
         out.write(shape.area() + "\n");
     }
 
-    private void createShape(String string, String string2) {
-        String[] parameters = extractParameters(string2);
+    private void createShape(final String string, final String string2) {
+        MeasureExtractor measure = new MeasureExtractor();
+        measure.extract(string2);
         switch (string) {
         case "SQUARE":
-            shape = new Square(new Integer(parameters[0]));
+            shape = new Square(measure.getParameter(0));
             break;
         case "RECTANGLE":
-            shape = new Rectangle(new Integer(parameters[0]), new Integer(parameters[1]));
+            shape = new Rectangle(measure.getParameter(0), measure.getParameter(1));
             break;
         case "TRIANGLE":
-            if (parameters.length == 1)
-                shape = new Triangle(new Integer(parameters[0]));
+            if (measure.numberOfParameters() == 1)
+                shape = new Triangle(measure.getParameter(0));
             else
-                shape = new Triangle(new Integer(parameters[0]), new Integer(parameters[1]));
+                shape = new Triangle(measure.getParameter(0), measure.getParameter(1));
             break;
         }
-    }
-
-    private String[] extractParameters(String string) {
-        String splitedParametrs[] = string.split(",");
-        return splitedParametrs;
     }
 
 }
