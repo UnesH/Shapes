@@ -1,5 +1,5 @@
 
-public class Square extends Rectangle implements Shape {
+public class Square extends Rectangle {
 
     private int width;
 
