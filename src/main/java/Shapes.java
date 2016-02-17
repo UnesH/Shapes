@@ -8,9 +8,9 @@ public class Shapes {
         this.out = out;
     }
 
-    public void area(final String string, final String string2) {
-        createShape(string, string2);
-        out.write(shape.area() + "\n");
+    public void area(final String shape, final String dimension) {
+        createShape(shape, dimension);
+        out.write(this.shape.area() + "\n");
     }
 
     private void createShape(final String string, final String string2) {
@@ -25,9 +25,12 @@ public class Shapes {
             break;
         case "TRIANGLE":
             if (dimension.numberOfDimensions() == 1)
-                shape = new Triangle(dimension.getDimension(0));
+                shape = new DegradedTriangle(dimension.getDimension(0));
             else
                 shape = new Triangle(dimension.getDimension(0), dimension.getDimension(1));
+            break;
+
+        default:
             break;
         }
     }
