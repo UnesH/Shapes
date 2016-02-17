@@ -14,20 +14,20 @@ public class Shapes {
     }
 
     private void createShape(final String string, final String string2) {
-        MeasureExtractor measure = new MeasureExtractor();
+        DimensionExtractor measure = new DimensionExtractor();
         measure.extract(string2);
         switch (string) {
         case "SQUARE":
-            shape = new Square(measure.getMeasure(0));
+            shape = new Square(measure.getDimension(0));
             break;
         case "RECTANGLE":
-            shape = new Rectangle(measure.getMeasure(0), measure.getMeasure(1));
+            shape = new Rectangle(measure.getDimension(0), measure.getDimension(1));
             break;
         case "TRIANGLE":
-            if (measure.numberOfMeasures() == 1)
-                shape = new Triangle(measure.getMeasure(0));
+            if (measure.numberOfDimensions() == 1)
+                shape = new Triangle(measure.getDimension(0));
             else
-                shape = new Triangle(measure.getMeasure(0), measure.getMeasure(1));
+                shape = new Triangle(measure.getDimension(0), measure.getDimension(1));
             break;
         }
     }
