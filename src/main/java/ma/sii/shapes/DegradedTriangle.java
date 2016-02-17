@@ -1,5 +1,6 @@
+package ma.sii.shapes;
 
-public class DegradedTriangle extends Triangle {
+class DegradedTriangle extends Triangle {
     protected int base;
 
     public DegradedTriangle(final int base) {

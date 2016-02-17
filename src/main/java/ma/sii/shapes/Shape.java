@@ -1,3 +1,4 @@
+package ma.sii.shapes;
 
 public interface Shape {
 

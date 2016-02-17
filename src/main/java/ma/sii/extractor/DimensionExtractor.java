@@ -1,3 +1,4 @@
+package ma.sii.extractor;
 
 public class DimensionExtractor {
 

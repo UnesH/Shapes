@@ -1,5 +1,6 @@
+package ma.sii.shapes;
 
-public class Triangle implements Shape {
+class Triangle implements Shape {
     private int base;
     private int height;
 

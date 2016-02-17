@@ -1,5 +1,6 @@
+package ma.sii.shapes;
 
-public class Square extends Rectangle {
+class Square extends Rectangle {
 
     private int width;
 

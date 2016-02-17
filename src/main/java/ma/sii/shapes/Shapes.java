@@ -1,4 +1,8 @@
+package ma.sii.shapes;
+
 import java.io.StringWriter;
+
+import ma.sii.extractor.DimensionExtractor;
 
 public class Shapes {
     private StringWriter out;
@@ -31,7 +35,7 @@ public class Shapes {
             break;
 
         default:
-            break;
+            throw new IllegalArgumentException();
         }
     }
 

@@ -19,6 +19,8 @@ import java.io.StringWriter;
 import org.junit.Before;
 import org.junit.Test;
 
+import ma.sii.shapes.Shapes;
+
 public class ShapesTest {
 
     private StringWriter out;
