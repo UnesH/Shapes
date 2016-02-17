@@ -18,16 +18,16 @@ public class Shapes {
         measure.extract(string2);
         switch (string) {
         case "SQUARE":
-            shape = new Square(measure.getParameter(0));
+            shape = new Square(measure.getMeasure(0));
             break;
         case "RECTANGLE":
-            shape = new Rectangle(measure.getParameter(0), measure.getParameter(1));
+            shape = new Rectangle(measure.getMeasure(0), measure.getMeasure(1));
             break;
         case "TRIANGLE":
-            if (measure.numberOfParameters() == 1)
-                shape = new Triangle(measure.getParameter(0));
+            if (measure.numberOfMeasures() == 1)
+                shape = new Triangle(measure.getMeasure(0));
             else
-                shape = new Triangle(measure.getParameter(0), measure.getParameter(1));
+                shape = new Triangle(measure.getMeasure(0), measure.getMeasure(1));
             break;
         }
     }

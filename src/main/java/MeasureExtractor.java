@@ -1,18 +1,18 @@
 
 public class MeasureExtractor {
 
-    private String parameters[];
+    private String measures[];
 
-    public int numberOfParameters() {
-        return parameters.length;
+    public int numberOfMeasures() {
+        return measures.length;
     }
 
-    public int getParameter(final int index) {
-        return new Integer(parameters[index]);
+    public int getMeasure(final int index) {
+        return new Integer(measures[index]);
     }
 
     public void extract(final String parametrs) {
-        parameters = parametrs.split(",");
+        measures = parametrs.split(",");
     }
 
 }
