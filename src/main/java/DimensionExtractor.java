@@ -13,6 +13,8 @@ public class DimensionExtractor {
 
     public void extract(final String parametrs) {
         dimensions = parametrs.split(",");
+        if (dimensions.length != 1 && dimensions.length != 2)
+            throw new IllegalArgumentException();
     }
 
 }
