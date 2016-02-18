@@ -26,7 +26,7 @@ public class ShapeFactory {
             break;
         case "TRIANGLE":
             if (dimentions.size() == 1)
-                shape = new DegradedTriangle(dimentions.get(0));
+                shape = new Triangle(dimentions.get(0));
             else
                 shape = new Triangle(dimentions.get(0), dimentions.get(1));
             break;

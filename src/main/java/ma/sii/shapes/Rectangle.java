@@ -1,6 +1,6 @@
 package ma.sii.shapes;
 
-class Rectangle implements Shape {
+class Rectangle extends Shape {
     protected int width;
     protected int lenght;
 

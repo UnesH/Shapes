@@ -1,6 +1,6 @@
 package ma.sii.shapes;
 
-class Square implements Shape {
+class Square extends Shape {
 
     private int width;
 

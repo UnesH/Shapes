@@ -19,17 +19,25 @@ import java.io.StringWriter;
 import org.junit.Before;
 import org.junit.Test;
 
+import ma.sii.formater.Formater;
+import ma.sii.formater.NewLineFormat;
+import ma.sii.writer.Writer;
+import ma.sii.writer.WriterForStringWriter;
 import presentation.Shapes;
 
-public class ShapesTest {
+public class ShapesTestWithStringWriterAndFormater {
 
     private StringWriter out;
+    private Writer writer;
+    private Formater formater;
     private Shapes shapes;
 
     @Before
-    public void initWriter() {
+    public void init() {
         out = new StringWriter();
-        shapes = new Shapes(out);
+        writer = new WriterForStringWriter(out);
+        formater = new NewLineFormat();
+        shapes = new Shapes(writer, formater);
     }
 
     @Test
