@@ -1,10 +1,9 @@
 package ma.sii.shapes;
 
-class DegradedTriangle extends Triangle {
-    protected int base;
+class DegradedTriangle implements Shape {
+    private int base;
 
     public DegradedTriangle(final int base) {
-        super(base, base);
         this.base = base;
     }
 

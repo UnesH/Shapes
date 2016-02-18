@@ -1,20 +1,26 @@
 package ma.sii.extractor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DimensionExtractor {
 
-    private String dimensions[];
+    private List<Integer> dimensions;
 
-    public int numberOfDimensions() {
-        return dimensions.length;
+    public DimensionExtractor() {
+        this.dimensions = new ArrayList<Integer>();
     }
 
-    public int getDimension(final int index) {
-        return new Integer(dimensions[index]);
+    public List<Integer> getDimension() {
+        return dimensions;
     }
 
     public void extract(final String parametrs) {
-        dimensions = parametrs.split(",");
-        if (dimensions.length != 1 && dimensions.length != 2)
+        String[] parametres = parametrs.split(",");
+        for (int i = 0; i < parametres.length; i++) {
+            dimensions.add(Integer.parseInt(parametres[i]));
+        }
+        if (dimensions.size() != 1 && dimensions.size() != 2)
             throw new IllegalArgumentException();
     }
 
