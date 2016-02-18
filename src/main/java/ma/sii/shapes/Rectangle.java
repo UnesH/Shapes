@@ -2,8 +2,8 @@ package ma.sii.shapes;
 
 class Rectangle implements Shape {
 
-    private int width;
-    private int lenght;
+    protected int width;
+    protected int lenght;
 
     public Rectangle(final int width, final int lenght) {
         super();
