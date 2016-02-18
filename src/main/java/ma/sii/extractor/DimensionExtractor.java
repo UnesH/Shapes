@@ -11,7 +11,7 @@ public class DimensionExtractor {
         this.dimensions = new ArrayList<Integer>();
     }
 
-    public List<Integer> getDimension() {
+    public List<Integer> getDimensions() {
         return dimensions;
     }
 

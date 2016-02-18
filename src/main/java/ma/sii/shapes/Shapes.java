@@ -11,10 +11,11 @@ public class Shapes {
         this.out = out;
     }
 
-    public void area(final String shapeString, final String dimension) {
-        DimensionExtractor dimensions = new DimensionExtractor();
-        dimensions.extract(dimension);
-        Shape shape = ShapeFactory.getInstance().createShape(shapeString, dimensions.getDimension());
+    public void area(final String shapeString, final String dimensions) {
+        final DimensionExtractor dimensionExtractor = new DimensionExtractor();
+        dimensionExtractor.extract(dimensions);
+        final ShapeFactory shapeFactory = ShapeFactory.getInstance();
+        final Shape shape = shapeFactory.createShape(shapeString, dimensionExtractor.getDimensions());
         out.write(shape.area() + "\n");
     }
 

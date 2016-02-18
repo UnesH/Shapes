@@ -63,4 +63,14 @@ public class ShapesTest {
         assertEquals("200\n", out.toString());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void unknownShape() throws IOException {
+        shapes.area("TRIANLE", "20");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void unknownArgument() throws IOException {
+        shapes.area("SQUARE", "20,20,30");
+    }
+
 }
