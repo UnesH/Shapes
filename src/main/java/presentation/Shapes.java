@@ -34,7 +34,9 @@ public class Shapes {
     public void area(final String nameOfShape, final String parameterForDimensions) {
         final List<Integer> dimensions = dimensionExtractor.extract(parameterForDimensions);
         final Shape shape = shapeFactory.createShape(nameOfShape, dimensions);
-        writer.write(shape.formatedArea(formater));
+        String area = String.valueOf(shape.area());
+        String formatedArea = formater.format(area);
+        writer.write(formatedArea);
     }
 
 }
